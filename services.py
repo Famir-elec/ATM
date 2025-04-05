@@ -68,3 +68,8 @@ class Services:
             print("You have not had any transactions")
 
         self.save_transaction(card_number, "show inventory", f"{str(datetime.today())}")
+    def Authentcation(self,card_number,password):
+        if self.data[card_number]["passcode"] == password:
+            return True
+        else:
+            return False
